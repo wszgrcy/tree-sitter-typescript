@@ -22,7 +22,7 @@
   "devDependencies": {
     "eslint": ">=8.57.0",
     "eslint-config-google": "^0.14.0",
-    "tree-sitter-cli": "^0.21.0",
+    "tree-sitter-cli": "0.21.0",
     "tree-sitter-javascript": "^0.20.4"
   },
   "scripts": {
@@ -34,7 +34,9 @@
     "test": "npm run test-typescript && npm run test-tsx && npm run test-load && script/parse-examples",
     "test-typescript": "cd typescript && npx tree-sitter test",
     "test-tsx": "cd tsx && npx tree-sitter test",
-    "test-windows": "pushd typescript && npx tree-sitter test && popd && pushd tsx && npx tree-sitter test"
+    "test-windows": "pushd typescript && npx tree-sitter test && popd && pushd tsx && npx tree-sitter test",
+    "test:wasm":"tree-sitter build-wasm ./typescript"
+
   },
   "tree-sitter": [
     {
